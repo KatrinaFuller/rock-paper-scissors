@@ -1,14 +1,39 @@
 function play(playerChoice) {
   let computerChoice = "rock";
 
-  if (playerChoice == computerChoice) {
-    //player rock and computer rock = tie
-    alert("It is a tie!");
-  } else if (playerChoice == "paper" && computerChoice == "rock") {
-    //player paper and computer rock = player wins
-    alert("Player wins!");
+  if (playerChoice == "rock") {
+    if (computerChoice == "rock") {
+      //player rock & computer rock = tie
+      alert("It is a tie!");
+    } else if (computerChoice == "paper") {
+      //player rock & computer paper = computer wins
+      alert("Computer wins!");
+    } else {
+      //player rock & computer scissors = player wins
+      alert("Player wins!");
+    };
+  } else if (playerChoice == "paper") {
+    if (computerChoice == "rock") {
+      //player paper & computer rock = player wins
+      alert("Player wins!");
+    } else if (computerChoice == "paper") {
+      //player paper & computer paper = tie
+      alert("It is a tie!");
+    } else {
+      //player paper & computer scissors = computer wins
+      alert("Computer wins!");
+    }
   } else {
-    //player scissors and computer rock = computer wins
-    alert("Computer wins!");
+    //player scissors
+    if (computerChoice == "rock") {
+      //player scissors & computer rock = computer wins
+      alert("Computer wins");
+    } else if (computerChoice == "paper") {
+      //player scissors & computer paper = player wins
+      alert("Player wins!");
+    } else {
+      //player scissors & computer scissors = tie
+      alert("It is a tie!");
+    }
   }
 }
