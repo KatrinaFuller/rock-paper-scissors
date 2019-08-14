@@ -1,5 +1,7 @@
 function play(playerChoice) {
-  let computerChoice = "rock";
+  let choices = ["rock", "paper", "scissors"];
+  let computerChoice = choices[Math.floor(Math.random() * choices.length)];
+  console.log(computerChoice)
 
   if (playerChoice == "rock") {
     if (computerChoice == "rock") {
