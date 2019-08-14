@@ -1,3 +1,24 @@
+.top-row{
+  background-color: #cc99cc;
+  min-height: 6vh;
+}
+
+.button-row{
+  background-color: #e5cce5;
+  min-height: 18vh;
+}
+
 i {
-  color: purple;
+  color: #800080;
+}
+
+.score-row{
+  background-color: #cc99cc;
+  min-height: 10vh;
+}
+
+.center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

@@ -14,29 +14,40 @@
 
 <body>
   <div class="container">
-    <div class="row text-center justify-content-center">
+    <div class="row top-row text-center justify-content-center">
       <div class="col-12">
         <h1>Rock Paper Scissors</h1>
       </div>
-      <div class="col-2 rock">
+    </div>
+    <div class="row button-row justify-content-center">
+      <div class="col-3 rock center">
         <button onclick="play('rock')">
           <i class="fas fa-hand-rock fa-3x p-2"></i>
         </button>
         <p>Rock</p>
       </div>
-      <div class="col-2 paper">
+      <div class="col-3 paper center">
         <button onclick="play('paper')">
           <i class="fas fa-hand-paper fa-3x p-2"></i>
         </button>
         <p>Paper</p>
       </div>
-      <div class="col-2 scissors">
+      <div class="col-3 scissors center">
         <button onclick="play('scissors')">
           <i class="fas fa-hand-scissors fa-3x p-2"></i>
         </button>
         <p>Scissors</p>
       </div>
     </div>
+    <div class="row score-row justify-content-center">
+      <div class="col-sm-12 col-md-6 center">
+        <h4>Player Score:</h4>
+      </div>
+      <div class="col-sm-12 col-md-6 center">
+        <h4>Computer Score:</h4>
+      </div>
+    </div>
+
   </div>
 
   <script src="app.js"></script>
