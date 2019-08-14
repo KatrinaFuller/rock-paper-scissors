@@ -29,7 +29,7 @@ function play(playerChoice) {
     //player scissors
     if (computerChoice == "rock") {
       //player scissors & computer rock = computer wins
-      alert("Computer wins");
+      alert("Computer wins!");
     } else if (computerChoice == "paper") {
       //player scissors & computer paper = player wins
       alert("Player wins!");
