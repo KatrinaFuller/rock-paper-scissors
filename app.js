@@ -18,16 +18,14 @@ function play(playerChoice) {
       // Increment Computer counter
       computerScore++;
       // update the HTML to show the new score
-      let computerScoreElement = document.querySelector("#computer-score");
-      computerScoreElement.textContent = "Computer Score: " + computerScore.toString();
+      updateComputerScore();
     } else {
       //player rock & computer scissors = player wins
       alert("Player wins!");
       // Increment Player Counter
       playerScore++;
       // update the HTML to show the new score
-      let playerScoreElement = document.querySelector("#player-score");
-      playerScoreElement.textContent = "Player Score: " + playerScore.toString();
+      updatePlayerScore();
     };
   } else if (playerChoice == "paper") {
     if (computerChoice == "rock") {
@@ -36,8 +34,7 @@ function play(playerChoice) {
       // Increment Player Counter
       playerScore++;
       // update the HTML to show the new score
-      let playerScoreElement = document.querySelector("#player-score");
-      playerScoreElement.textContent = "Player Score: " + playerScore.toString();
+      updatePlayerScore();
     } else if (computerChoice == "paper") {
       //player paper & computer paper = tie
       alert("It is a tie! No one gets a point.");
@@ -47,8 +44,7 @@ function play(playerChoice) {
       // Increment Computer counter
       computerScore++;
       // update the HTML to show the new score
-      let computerScoreElement = document.querySelector("#computer-score");
-      computerScoreElement.textContent = "Computer Score: " + computerScore.toString();
+      updateComputerScore();
     }
   } else {
     //player scissors
@@ -58,19 +54,48 @@ function play(playerChoice) {
       // Increment Computer counter
       computerScore++;
       // update the HTML to show the new score
-      let computerScoreElement = document.querySelector("#computer-score");
-      computerScoreElement.textContent = "Computer Score: " + computerScore.toString();
+      updateComputerScore();
     } else if (computerChoice == "paper") {
       //player scissors & computer paper = player wins
       alert("Player wins!");
       // Increment Player Counter
       playerScore++;
       // update the HTML to show the new score
-      let playerScoreElement = document.querySelector("#player-score");
-      playerScoreElement.textContent = "Player Score: " + playerScore.toString();
+      updatePlayerScore();
     } else {
       //player scissors & computer scissors = tie
       alert("It is a tie! No one gets a point.");
     }
+  }
+
+  gameOver();
+};
+
+function updatePlayerScore() {
+  let playerScoreElement = document.querySelector("#player-score");
+  playerScoreElement.textContent = "Player Score: " + playerScore.toString();
+};
+
+function updateComputerScore() {
+  let computerScoreElement = document.querySelector("#computer-score");
+  computerScoreElement.textContent = "Computer Score: " + computerScore.toString();
+};
+
+function resetGame() {
+  if (confirm("Are you sure you want to restart this game?")) {
+    playerScore = 0;
+    computerScore = 0;
+    updatePlayerScore();
+    updateComputerScore();
+  }
+}
+
+function gameOver() {
+  if (playerScore == 5) {
+    alert("GAME OVER! Congrats, you won!");
+    resetGame();
+  } else if (computerScore == 5) {
+    alert("GAME OVER! Sorry, you lost.");
+    resetGame();
   }
 }
