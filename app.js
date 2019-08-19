@@ -14,7 +14,7 @@ function play(playerChoice) {
       alert("It is a tie! No one gets a point.");
     } else if (computerChoice == "paper") {
       //player rock & computer paper = computer wins
-      alert("Computer wins!");
+      alert("Computer chose paper. Computer wins!");
       // Increment Computer counter
       computerScore++;
       // update the HTML to show the new score
@@ -40,7 +40,7 @@ function play(playerChoice) {
       alert("It is a tie! No one gets a point.");
     } else {
       //player paper & computer scissors = computer wins
-      alert("Computer wins!");
+      alert("Computer chose scissors. Computer wins!");
       // Increment Computer counter
       computerScore++;
       // update the HTML to show the new score
@@ -50,7 +50,7 @@ function play(playerChoice) {
     //player scissors
     if (computerChoice == "rock") {
       //player scissors & computer rock = computer wins
-      alert("Computer wins!");
+      alert("Computer chose rock. Computer wins!");
       // Increment Computer counter
       computerScore++;
       // update the HTML to show the new score
